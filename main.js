@@ -47,7 +47,7 @@ const createWindow = () => {
 
 
     // 创建任务栏图标
-    tray = new Tray(path.join(__dirname, 'src/assets/imgs/wooden-fish.png'))
+    tray = new Tray(path.join(__dirname, './icon.ico'))
 
     // 自定义托盘图标的内容菜单
     const contextMenu = Menu.buildFromTemplate([
