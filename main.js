@@ -18,6 +18,7 @@ const createWindow = () => {
         resizable: false,
         movable: true,
         transparent: true,
+        hasShadow: false,
         // x: 2100,
         // y: 1000,
         webPreferences: {
