@@ -1,38 +1,55 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: end;
+  justify-content: left;
+  position: relative;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+
+.App > .wooden-fish {
+  width: 67%;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App > .wooden-fish > img {
+  width: 100%;
+  /*-webkit-app-region: drag;*/
+}
+
+.App > .wooden-fish > .hammer {
+  width: 80%;
+  position: absolute;
+  top: -22%;
+  left: 65%;
+}
+
+.App > .wooden-fish > .hammer > img {
+  width: 100%;
+  /*-webkit-app-region: drag;*/
+}
+
+.App > .wooden-fish > .voice {
+  width: 25%;
+  position: absolute;
+  top: -50%;
+  left: 35%;
+}
+
+.App > .wooden-fish > .voice > img {
+  width: 100%;
+  display: none;
+  /*-webkit-app-region: drag;*/
+}
+
+.App > .wooden-fish > .text {
+  position: absolute;
+  color: #fff;
+  top: -30%;
+  left: 20%;
+  /*font-weight: bold;*/
+  text-shadow: 0 0 5px #6897bb;
+  font-size: 1.4em;
 }
