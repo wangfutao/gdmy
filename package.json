@@ -7,12 +7,13 @@
   "main": "main.js",
   "homepage": "./",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start-rt": "react-scripts start",
+    "build-rt": "react-scripts build",
     "start-electron": "electron .",
-    "package-win32": "electron-packager . 自动功德机 --platform=win32 --arch=x64 --overwrite"
+    "package-win32": "electron-packager . 自动功德机 --platform=win32 --arch=x64 --overwrite --ignore=src,node_modules,public",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +42,7 @@
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
     "@wangft/animate.js": "^1.0.4",
+    "electron-squirrel-startup": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -48,7 +50,13 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "electron": "^23.2.1",
-    "electron-packager": "^17.1.1"
+    "@electron-forge/cli": "^6.1.0",
+    "@electron-forge/maker-deb": "^6.1.0",
+    "@electron-forge/maker-rpm": "^6.1.0",
+    "@electron-forge/maker-squirrel": "^6.1.0",
+    "@electron-forge/maker-zip": "^6.1.0",
+    "@electron-forge/maker-wix": "^6.1.0",
+    "@electron-forge/maker-dmg": "^6.1.0",
+    "electron": "^23.2.1"
   }
 }
