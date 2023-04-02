@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import './App.css';
 import {Animate} from "@wangft/animate.js";
 
-const texts = [
+let texts = [
+    '余额 +1',
     '功德 +1',
     '财富 +1',
     '幸福感 +1',
@@ -26,7 +27,12 @@ const texts = [
     '难过 -1',
     '懒惰 -1',
     '失败 -1',
+    '脂肪 -1',
 ]
+// texts = [
+//     '余额 +1',
+//     '脂肪 -1',
+// ]
 
 
 export default class App extends Component<any, any> {
@@ -73,7 +79,7 @@ export default class App extends Component<any, any> {
 
             setTimeout(() => {
                 eleVoice.style.display = 'none';
-            }, 100)
+            }, 200)
         }
 
         let t1 = new Date().getTime();
@@ -136,7 +142,7 @@ export default class App extends Component<any, any> {
         return (
             <div className="App">
                 <div className="wooden-fish">
-                    <img src={require('./assets/imgs/wooden-fish.png')} alt="" onClick={()=>{
+                    <img src={require('./assets/imgs/wooden-fish.png')} alt="" onClick={() => {
                         this.isPlaySound = !this.isPlaySound;
                     }}/>
                     <div className="hammer">

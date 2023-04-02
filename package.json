@@ -7,7 +7,7 @@
   "main": "main.js",
   "homepage": "./",
   "scripts": {
-    "start-rt": "react-scripts start",
+    "start-rt": "set BROWSER=none&react-scripts start",
     "build-rt": "react-scripts build",
     "start-electron": "electron .",
     "package-win32": "electron-packager . 自动功德机 --platform=win32 --arch=x64 --overwrite --ignore=src,node_modules,public",

@@ -1,12 +1,13 @@
 const {app, BrowserWindow, Tray, Menu} = require('electron');
 const url = require('url');
 const path = require('path');
+
 let tray = null;
 
 const createWindow = () => {
     const win = new BrowserWindow({
-        width: 400,
-        height: 300,
+        width: 200,
+        height: 150,
         // width: 1200,
         // height: 800,
         frame: false,
@@ -31,7 +32,7 @@ const createWindow = () => {
     const {screen} = require('electron');
     const {width, height} = screen.getPrimaryDisplay().workAreaSize;
 
-    win.setPosition(width - win.getSize()[0], height - win.getSize()[1] - 50);
+    win.setPosition(width - win.getSize()[0], height - win.getSize()[1] - 30);
     // win.webContents.openDevTools();
 
     if (app.isPackaged) {
@@ -50,20 +51,29 @@ const createWindow = () => {
     // 创建任务栏图标
     tray = new Tray(path.join(__dirname, './icon.ico'))
 
+    win.webContents.setAudioMuted(true);
     // 自定义托盘图标的内容菜单
     const contextMenu = Menu.buildFromTemplate([
         {
+            id: 'voice',
+            label: '声音',
+            click: async function () {
+                // 静音
+                await win.webContents.setAudioMuted(!win.webContents.audioMuted);
+            },
+
+        },
+        {
             // 点击退出菜单退出程序
-            label: '退出', click: function () {
-                console.log(123);
+            label: '退出',
+            click: function () {
                 win.destroy()
                 app.quit()
-
-            }
+            },
         }
     ])
 
-    tray.setToolTip('demo')  // 设置鼠标指针在托盘图标上悬停时显示的文本
+    tray.setToolTip('自动功德机')  // 设置鼠标指针在托盘图标上悬停时显示的文本
     tray.setContextMenu(contextMenu)  // 设置图标的内容菜单
     // 点击托盘图标，显示主窗口
     tray.on("click", () => {

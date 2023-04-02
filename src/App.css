@@ -1,55 +1,56 @@
 .App {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: end;
-  justify-content: left;
-  position: relative;
-  overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: left;
+    position: relative;
+    overflow: hidden;
 }
 
 
 .App > .wooden-fish {
-  width: 67%;
-  position: relative;
+    width: 67%;
+    position: relative;
 }
 
 .App > .wooden-fish > img {
-  width: 100%;
-  /*-webkit-app-region: drag;*/
+    width: 90%;
+    /*-webkit-app-region: drag;*/
 }
 
 .App > .wooden-fish > .hammer {
-  width: 80%;
-  position: absolute;
-  top: -22%;
-  left: 65%;
+    width: 80%;
+    position: absolute;
+    top: -28%;
+    left: 55%;
 }
 
 .App > .wooden-fish > .hammer > img {
-  width: 100%;
-  /*-webkit-app-region: drag;*/
+    width: 100%;
+    /*-webkit-app-region: drag;*/
 }
 
 .App > .wooden-fish > .voice {
-  width: 25%;
-  position: absolute;
-  top: -50%;
-  left: 35%;
+    width: 25%;
+    position: absolute;
+    top: -50%;
+    left: 25%;
 }
 
 .App > .wooden-fish > .voice > img {
-  width: 100%;
-  display: none;
-  /*-webkit-app-region: drag;*/
+    width: 100%;
+    display: none;
+    /*-webkit-app-region: drag;*/
 }
 
 .App > .wooden-fish > .text {
-  position: absolute;
-  color: #fff;
-  top: -30%;
-  left: 20%;
-  /*font-weight: bold;*/
-  text-shadow: 0 0 5px #6897bb;
-  font-size: 1.4em;
+    position: absolute;
+    color: #ffa846;
+    top: -30%;
+    left: 10%;
+    /*font-weight: bold;*/
+    /*text-shadow: 0 0 5px #6897bb;*/
+    text-shadow: 0 0 5px #fff;
+    font-size: 1.2em;
 }
